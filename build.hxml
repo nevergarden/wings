@@ -1,0 +1,4 @@
+--class-path src
+--resource res/FiraGO-Regular.ttf@fira
+--main Main
+--interp

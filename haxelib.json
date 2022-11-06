@@ -1,0 +1,12 @@
+{
+  "name": "wings",
+  "url" : "https://github.com/nevergarden/wings",
+  "license": "MIT",
+  "tags": ["font", "truetype"],
+  "description": "A Font Rendering Engine.",
+  "version": "0.0.1",
+  "classPath": "src/",
+  "releasenote": "Initial commit.",
+  "contributors": ["Nevergarden"],
+  "dependencies": {}
+}
