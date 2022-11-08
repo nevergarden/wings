@@ -1,13 +1,13 @@
 package nevergarden.wings.ds;
 
-typedef FontTableType = {
+typedef OpenTypeTableRecordType = {
     var tag : String;
     var checksum : UInt;
     var offset : UInt;
     var length : UInt;
 }
 
-abstract FontTable(FontTableType) {
+abstract OpenTypeTableRecord(OpenTypeTableRecordType) {
     public var tag(get, set):String;
 
     function get_tag() {
@@ -49,7 +49,7 @@ abstract FontTable(FontTableType) {
     }
 
 
-    public function new(value : FontTableType) {
+    public function new(value : OpenTypeTableRecordType) {
         this = value;
     }
 }

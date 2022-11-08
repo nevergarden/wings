@@ -3,6 +3,11 @@ package nevergarden.wings.utils;
 import haxe.io.Bytes;
 
 class ByteUtils {
+    public static inline function getu8(offset:Int, bytes:Bytes):UInt {
+        var b0 : UInt = bytes.get(offset);
+        return b0;
+    }
+
     public static inline function getu16(offset:Int, bytes:Bytes):UInt {
         var b0 : Int = bytes.get(offset + 1);
         var b1 : Int = bytes.get(offset);
