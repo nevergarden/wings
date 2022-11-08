@@ -1,6 +1,6 @@
 package nevergarden.wings.parsers;
 
-import haxe.xml.Check;
+import nevergarden.wings.parsers.TrueTypeTableParsers.HEADParser;
 import nevergarden.wings.ds.OpenTypeTableRecord;
 import haxe.Exception;
 import nevergarden.wings.utils.ByteUtils;
@@ -48,6 +48,12 @@ class OpenTypeParser {
         this.offset += 2;
         
         parseTables();
+
+        var headTable : OpenTypeTableRecord = tableRecords.get("head");
+        var headBin = data.sub(headTable.offset, headTable.length);
+        var c = new HEADParser(headBin);
+        trace(c.parsed);
+        
     }
 
     private function parseTables() {
